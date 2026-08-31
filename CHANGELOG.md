@@ -2,6 +2,18 @@
 
 所有值得复用的行为变化都记录在此文件中。
 
+## [0.3.0] - 2026-08-31
+
+### Renamed
+
+- Skill slug 从 `a2a-code-team-orchestrator` 更名为 `multi-agent-task-orchestrator`。
+- GitHub 仓库同步更名为 `lbxAOA/multi-agent-task-orchestrator`。
+
+### Changed
+
+- 名称与实际能力对齐：通用任务拆解、按收益委派、多智能体协作、独立审查、验收与复盘。
+- 统一 README、复盘模板与持续优化文档中的通用多智能体表述。
+
 ## [0.2.0] - 2026-08-31
 
 ### Changed
