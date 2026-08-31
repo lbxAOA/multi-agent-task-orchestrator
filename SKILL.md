@@ -1,8 +1,8 @@
 ---
-name: a2a-code-team-orchestrator
+name: multi-agent-task-orchestrator
 description: "用 Hermes 拆解、委派并验收多智能体任务。"
-version: 0.2.0
-author: Hermes Agent
+version: 0.3.0
+author: lbxAOA, Hermes Agent
 license: MIT
 platforms: [linux, macos, windows]
 metadata:
@@ -115,18 +115,18 @@ A2A peer 缺失、不可达或能力不匹配时，不要硬派或伪称已委�
 4. 返回内容不足、测试失败或需要修复时，向同一成员补充任务，或交给独立成员复核；以证据而非回复长度解决冲突。
 5. 如果成员要求超出授权的决定、秘密或高风险动作，暂停并向用户询问，不要替用户同意。
 
-### 6. 自动复盘与规则演进
+### 5. 自动复盘与规则演进
 
 每个实际发生了**委派或团队协作**的任务在结束、阻塞或取消时，Hermes 必须自动创建一份任务复盘；可由 A2A peer、`delegate_task` 子代理，或多成员的串行/并行协作触发。Hermes 独自完成的简单任务不强制创建复盘，除非出现高风险失败或用户要求记录。
 
-1. 从 `docs/retrospective-template.md` 创建 `docs/retrospectives/YYYY-MM-DD-<简短-kebab-case-任务名>.md`。若同一天同名文件已存在，追加 `-2`、`-3` 等序号，不得覆盖旧记录。
+1. 从 `references/retrospective-template.md` 创建项目中的 `docs/retrospectives/YYYY-MM-DD-<简短-kebab-case-任务名>.md`。若同一天同名文件已存在，追加 `-2`、`-3` 等序号，不得覆盖旧记录。
 2. 只填写可核验的真实信息：任务契约、工作目录、执行通道与实际负责人、A2A `context_id`（若有）、变更文件、`git diff` 结论、实际执行命令及退出状态、阻塞项与风险。
 3. 没有执行某项验收时，明确填写“未运行”及原因；不得把 peer 的口头声称写成验证通过。
 4. 保存复盘后，在最终报告中给出文件路径和一句结论。若任务中断，先保存已知证据，再报告未完成状态。
 5. 复盘中的候选规则只在满足下列任一门槛时才写回主 Skill：同类问题第二次出现；一次高风险事件；或用户明确要求修改团队行为。写回时更新版本、`CHANGELOG.md`，并在下一次匹配任务中验证。
 6. 若项目未包含该目录或任务是临时、不可写工作区，则将复盘保存到总管 Skill 仓库；仍无法写入时，向用户明确报告该复盘未保存的原因。
 
-### 7. 集成与验收
+### 6. 集成与验收
 
 Hermes 必须亲自完成或真实调用工具验证：
 
